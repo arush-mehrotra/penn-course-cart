@@ -1,6 +1,7 @@
 import courses from '../data/courses.json'
 import Cart from './Cart';
 import Nav from './Nav';
+import Footer from './Footer';
 import MUIDataTable from "mui-datatables";
 import React, { useState } from 'react';
 
@@ -142,6 +143,7 @@ const CoursesTable = () => {
         }}
       />
       <Cart arr = {cart}/>
+      <Footer />
     </div>
   )
 }

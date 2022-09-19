@@ -1,6 +1,7 @@
 import './App.css';
 import Courses from './components/Courses';
 import Receipt from './components/Receipt';
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
