@@ -6,13 +6,27 @@ import React, { useState } from 'react';
 
 const CoursesTable = () => {
 
-  // The purpose of this loop is to format the pre-requisites array neatly for display
+  // The purpose of this loop is to format the pre-requisites and cross-listed array neatly for display
 
   var courses_temp = courses;
 
-  for (var i = 0; i < courses.length; i++){
+  for (var i = 0; i < courses_temp.length; i++){
     if (courses_temp[i].prereqs !== undefined) {
       let tempArray = courses_temp[i].prereqs as string[];
+      if ((tempArray?.length !== undefined && tempArray.length > 1)){
+        for (var j = 0; j < tempArray?.length - 1; j++){
+          if (!(tempArray[j].includes('--'))){
+            let tempVal = tempArray[j] + ' -- ';
+            tempArray[j] = tempVal;
+          }
+        }
+      }
+    }
+  }
+
+  for (var i = 0; i < courses_temp.length; i++){
+    if (courses_temp[i]['cross-listed'] !== undefined) {
+      let tempArray = courses_temp[i]['cross-listed'] as string[];
       if ((tempArray?.length !== undefined && tempArray.length > 1)){
         for (var j = 0; j < tempArray?.length - 1; j++){
           if (!(tempArray[j].includes('--'))){
