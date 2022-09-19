@@ -7,7 +7,7 @@ const Cart = ({arr}) => {
     alert('You do not have any courses to checkout!')
   }
 
-  // Controlls the routing to the receiept page 
+  // Controlls the routing to the receipt page 
 
   let navigate = useNavigate();
   const routeChange = () => {
