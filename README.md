@@ -12,6 +12,7 @@ src/                   Where the JS logic is
     Courses.tsx        Basic component for rendering courses
     Nav.tsx            Basic component for the navbar
     Receipt.tsx        Basic component for the receipt
+    Footer.tsx         Basic component for the footer
 
   data/                Contains data rendered by the components
     courses.json       Contains information on CIS courses at Penn
